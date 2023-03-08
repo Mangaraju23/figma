@@ -1,0 +1,65 @@
+@import 'src/styles/layout_old/layout';
+@import 'src/styles/settings/color';
+@import 'src/styles/inputs/button';
+@import 'src/styles/settings/fonts';
+
+* {
+  font-family: $font-regular, $font-fallback;
+  font-size: small;
+}
+
+.container__pagination {
+  @include container-layout(row, space-between, center);
+  border: 1px solid $gray-dark;
+  background-color: $white;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-family: $font-regular, $font-fallback;
+}
+
+.container__pagination-page-size {
+  @include container-layout(row, space-between, center);
+
+  select {
+    background-color: $accent-primary;
+    color: $white;
+    padding: 4px;
+    border-color: $accent-primary;
+    @include border-radius (4px);
+  }
+}
+
+.container__pagination-series {
+  @include container-layout(row, space-between, center);
+  gap: 0.2rem;
+}
+
+.page-no-series {
+  @include container-layout(row, space-between, center);
+  // max-width: 160px;
+}
+
+.page-no a {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.page-no a.active {
+  text-decoration: none;
+  color: $white;
+  background-color: $accent-primary;
+  padding: 4px 8px;
+  @include border-radius (4px);
+}
+
+.m-r-50 {
+  margin-right: 50px;
+}
+
+.m-r-5 {
+  margin-right: 5px;
+}
+
+.m-l-5 {
+  margin-left: 5px;
+}

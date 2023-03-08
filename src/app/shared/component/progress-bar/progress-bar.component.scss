@@ -1,0 +1,29 @@
+@import '/src/styles/settings/color';
+@import '/src/styles/mixins/flexbox';
+@import '/src/styles/inputs/button';
+@import '/src/styles/mixins/common';
+
+
+
+.progress-text {
+    color: grey;
+    text-align: left;
+    font: normal normal 900 12px/18px Avenir, sans-serif;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+
+.outer-layer {
+    width: 100%;
+    height: 6px;
+    background: #ECECEC;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.inner-progress-layer {
+    background: blue ;
+    height: -webkit-fill-available;
+    z-index: 1;
+    border-radius: 4px;
+}

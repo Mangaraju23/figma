@@ -1,0 +1,9 @@
+<div class="progressbar-container" role="status">
+    <span class="visually-hidden" id="progress_label" [innerHTML]="'Current Progress:' + prg+'%' "></span>
+    <label aria-hidden="true" class="progress-text" [innerHTML]="prg+'%'"></label>
+    <div class="outer-layer">
+        <div class="inner-progress-layer" [style.width]="prg+'%'" role="status" aria-labelledby="progress_label"
+            aria-valuemin="0" aria-valuemax="100" [attr.aria-valuenow]="prg" aria-live="polite" aria-busy="true">
+        </div>
+    </div>
+</div>

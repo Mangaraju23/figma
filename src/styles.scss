@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+html, body {
+   height: 100%;
+   width: 100%;
+   padding: 5px;
+   box-sizing: border-box;
+   -webkit-overflow-scrolling: touch;
+}
+@import "./styles/reset/_sanitize.css"; // Applied to provide consistent, cross-browser default styling of HTML elements alongside useful defaults  
+// @import "./style/reset/_reboot.css"; // Provides many HTML elements with somewhat opinionated styles using only element selectors.
+
+// @import "@collab/comp-library/style/icons/icons.css";
+// //@import "@collab/comp-library/style/inputs/checkbox";
+// @import "@collab/comp-library/style/inputs/formfields";
+// @import "@collab/comp-library/style/inputs/radio";
+// @import "@collab/comp-library/style/mixins/common";
+// @import "@collab/comp-library/style/mixins/flexbox";
+// @import "@collab/comp-library/style/mixins/layout";
+// @import "@collab/comp-library/style/mixins/spacing";
+// @import "@collab/comp-library/style/settings/color";
+// @import "@collab/comp-library/style/settings/fonts";
+// @import "@collab/comp-library/style/settings/grid";
+// @import "@collab/comp-library/style/settings/screenBreakpoints";
+// @import "@collab/comp-library/style/text/text";
+// @import "@collab/comp-library/style/tooltip.scss";
+// @import "/src/styles/inputs/button";
+@import "/src/styles/settings/tabs";
+@import "/src/styles/settings/modal";
+@import "/src/styles/settings/color";

@@ -1,0 +1,171 @@
+@import 'src/styles/settings/fonts';
+@import 'src/styles/settings/color';
+@import "src/styles/mixins/flexbox";
+// @import '/src/app/shared/component/file-upload/file-upload.component.scss';
+
+app-breadcrumb {
+  font-family: sans-serif;
+  font-size: large;
+}
+
+.project__header {
+  padding: 0 30px; 
+}
+
+
+.project__content {
+  padding: 0 30px;
+  min-height: calc(100vh - 255px)
+}
+
+.project__content-caption {
+  p {
+    padding: 20px 0;
+    font-family: $font-regular, $font-fallback;
+    font-size: 1em;
+  }
+}
+
+.project__content-actions {
+  @include flexbox;
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+  @include align-items(center);
+  gap: 30px;
+  margin-top: 20px;
+
+  // .button__add {
+  //   width: 300px;
+
+  //   &:first-child {
+  //     &:before {
+  //       font-family: 'icomoon';
+  //       content: "\e942";
+  //       font-size: 4rem;
+  //       color: $accent-primary;
+  //       padding-bottom: 0.5rem;
+  //     }
+  //   }
+
+  //   &:nth-child(2) {
+  //     &:before {
+  //       font-family: 'icomoon';
+  //       content: "\e926";
+  //       font-size: 4rem;
+  //       color: $accent-primary;
+  //       padding-bottom: 0.5rem;
+  //     }
+  //   }
+  // }
+  }
+
+.btn {
+  width: 330px;
+  height: 117px;
+  font-family: 'icomoon';
+  font-size: 20px;
+  color: $accent-primary;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+span {
+    color: $accent-primary !important;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+.project_form__container {
+  @include flexbox;
+  @include flex-direction(column);
+  margin: 30px;
+  padding: 0 30px;
+  border-radius: 8px;
+  background-color: $white;
+  min-height: calc(100vh - 200px)
+}
+
+.project_form__navtab {
+  @include flexbox;
+  @include flex-direction(row);
+}
+
+.hr-navtab {
+  width: 100%;
+  position: relative;
+  bottom: 40px;
+}
+
+.container__modal-add-excel {
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  min-width: 720px;
+  min-height: 260px;
+  // border: solid 1px $dark-4;
+  border-radius: 8px;
+  // gap: 10px;
+}
+
+.container--fileUpload__wrapper {
+  width: 100%;
+  font-family: $font-regular, $font-fallback;
+}
+
+.alert--wrapper {
+  display: flex;
+  color: #8E0000;
+  background-color: #FFD5CC;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: solid 1px #8E0000;
+  border-radius: 8px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .add-pro-header {
+//     padding: 0 30px;
+// }
+
+// .btn-con {
+//     display: flex;
+//     flex-direction: row;
+// }
+// .button_add {
+//     display: flex;
+//     width: 330px;
+//     height: 117px;
+//     align-items: center;
+//     justify-content: center;
+//     margin-left: 10px;
+//     margin-top: 20px;
+// }
+
+// span {
+//     color: #0040DD;
+//     font-weight: 600;
+//     line-height: 120%;
+//     font-size: 20px;
+//   }

@@ -1,0 +1,46 @@
+<div class="container__row--space-between--center margin__top--100" *ngIf="gridApi">
+  <div class="container__row--flex-start--center">
+    <div class="margin__right--150"><span>Showing</span>
+      {{currentRecordsOfTotal}}
+    </div>
+    <div>
+      <label for="pageSize" aria-labelledby="pageSizeDescription" class="margin__right--50">Show</label>
+      <select (change)="onPageSizeChanged($event)" [(ngModel)]="pageSize" id="pageSize">
+        <option [value]="pageSize" [selected]="isPageSizeChanged">{{pageSize}}</option>
+        <option [value]="item" [selected]="i === 0 && !isPageSizeChanged"
+          *ngFor="let item of pageSizeList; let i = index ">{{item}}</option>
+      </select>
+      <span class="margin__left--50" id="pageSizeDescription">per page</span>
+    </div>
+  </div>
+
+  <div class="ag-paging-panel ag-unselectable container__pagination-series">
+    <collab-comp-img-generator
+      [fontClassName]="gridApi.paginationGetCurrentPage() === 0 ? 'icon-First_Inactive' : 'icon-First_Active'"
+      (click)="onButtonFirst()" [ngClass]="gridApi.paginationGetCurrentPage() === 0 ? 'icon-disable' : 'icon-enable'">
+    </collab-comp-img-generator>
+    <collab-comp-img-generator
+      [fontClassName]="gridApi.paginationGetCurrentPage() === 0 ? 'icon-Prev_Inactive' : 'icon-Prev_Active'"
+      (click)="onButtonPrevious()"
+      [ngClass]="gridApi.paginationGetCurrentPage() === 0 ? 'icon-disable' : 'icon-enable'">
+    </collab-comp-img-generator>
+    <div class="page-no-series">
+      <span class="page-no" *ngFor="let pageValue of pageRange(currentPageNo, gridApi.paginationGetTotalPages());">
+        <a [class.active]="pageValue === currentPageNo" (click)="goto(pageValue)">
+          {{pageValue}}
+        </a>
+      </span>
+    </div>
+    <collab-comp-img-generator
+      [fontClassName]="gridApi.paginationGetCurrentPage() + 1 === gridApi.paginationGetTotalPages() ? 'icon-Next_Inactive' : 'icon-Next_Active'"
+      (click)="onButtonNext()"
+      [ngClass]="gridApi.paginationGetCurrentPage() + 1 === gridApi.paginationGetTotalPages() ? 'icon-disable' : 'icon-enable'">
+    </collab-comp-img-generator>
+
+    <collab-comp-img-generator
+      [fontClassName]="gridApi.paginationGetCurrentPage() + 1 === gridApi.paginationGetTotalPages() ? 'icon-Last_Inactive' : 'icon-Last_Active'"
+      (click)="onButtonLast()"
+      [ngClass]="gridApi.paginationGetCurrentPage() + 1 === gridApi.paginationGetTotalPages() ? 'icon-disable' : 'icon-enable'">
+    </collab-comp-img-generator>
+  </div>
+</div>

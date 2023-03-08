@@ -1,0 +1,12 @@
+<div class="stepper_wrapper">
+    <span class="visually-hidden" [innerHTML]="'Step'+(flag+1)+'out of' +steps.length +':'+ steps[flag].title +' is in progress'" role="status" *ngIf="steps[flag]"></span>
+    <ng-container *ngFor="let step of steps;let i=index">
+        <div class="step" [ngClass]="getStatus(step)">        
+            <div class="v-stepper">        
+                <div class="circle"></div>
+                <div class="line"></div>
+            </div>
+            <span class="step_text" [attr.aria-hidden]="true">{{step.title| uppercase}}</span>
+        </div>
+    </ng-container>
+</div>

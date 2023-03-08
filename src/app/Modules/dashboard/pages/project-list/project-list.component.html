@@ -1,0 +1,59 @@
+<main>
+    <div class="dashboard__header">
+        <div class="dash-heading-con">
+            <h3>Project Dashboard </h3>
+            <h5> (Week Ending 23rd Feb)</h5>
+        </div>
+        <div>
+            <!-- <collab-comp-button 
+            type="button"
+            [buttonConfig]="buttonConfig" 
+            (onBtnClick)="add()"> 
+            
+            </collab-comp-button> -->
+            <collab-comp-button type="button" [buttonConfig]="buttonConfig" (onBtnClick)="openCreateNewProject()">
+            </collab-comp-button>
+        </div>
+    </div>  
+    <hr />
+    <div>
+        <div class="tab-con">
+            <!-- <app-table-grid 
+                [rowData]="rowData" 
+                [components]="components" 
+                [defaultColDef]="defaultColDef"
+                [columnNames]="columnNames" 
+                [paginationPageSize]="paginationPageSize" 
+                [rowSelection]="rowSelection"
+                (gridReady)="onGridReady($event)" 
+                (getRowsSelected)="onRowSelection($event)">
+            </app-table-grid> -->
+
+            <!-- <app-table-grid
+                [rowData]="rowData"
+                [columnHeader]="colNames"
+            >
+            </app-table-grid> -->
+
+            <!-- <ag-grid-angular   style="width: 100%; height: 100%"
+            class="ag-theme-alpine" [rowData]="rowData" [columnDefs]="colNames"></ag-grid-angular> -->
+
+            <ag-grid-angular
+                [rowData]= "rowData"
+                [columnDefs] = "columnNames"
+                class="ag-theme-alpine"
+                style="height: 500px; width: 500px;"
+            >
+            </ag-grid-angular>
+            <!-- <app-table-grid
+                [rowData]="rowData"
+                [columnNames]="columnNames"
+                [defaultColDef]="defaultColDef"
+                        
+            >
+
+            </app-table-grid> -->
+        </div> 
+    </div>
+</main>  
+  

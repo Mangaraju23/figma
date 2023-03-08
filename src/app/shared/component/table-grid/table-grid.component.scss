@@ -1,0 +1,35 @@
+// @import "ag-grid-community/src/styles/ag-grid.scss";
+// @import "ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+//@import "~ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine.scss";
+@import "/src/styles/mixins/common";
+#ag-grid {
+  flex: 1 1 0px;
+  width: 100%;
+  //max-height: 550px;
+  overflow-y: auto;
+  height: 471px;
+}
+
+.ag-theme-alpine {
+    // @include ag-theme-alpine((
+    //         odd-row-background-color: #f9f6f6,
+    //         header-background-color: #000000,
+    //         cell-horizontal-border: solid ag-derived(secondary-border-color),
+    // ));
+    span.ag-header-cell-text {
+        font-weight: 600;
+        font-size: 13px;
+        color: #ffffff;
+    }
+    .ag-header-cell {
+        // or write CSS selectors to make customisations beyond what the parameters support
+        border-right: 1px solid ag-param(secondary-border-color);
+    }
+    .ag-header-row .ag-icon{
+      color: white;
+    }
+
+    .ag-row{
+        font-size: 13px !important;
+    }
+}

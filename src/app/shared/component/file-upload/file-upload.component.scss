@@ -1,0 +1,121 @@
+@import "@collab/comp-library/style/settings/color";
+@import '@collab/comp-library/style/mixins/flexbox';
+@import 'src/styles/inputs/button';
+@import '@collab/comp-library/style/mixins/common';
+
+%fileUpload {
+  @include flexbox;
+  @include flex-direction(column);
+  @include border-radius(8px);
+  background-color: $white;
+  border: 1px solid $dark-4;
+}
+
+ul {
+  @include flex-direction(column);
+  max-height: 230px;
+  overflow-y: auto;
+
+  li:last-child {
+    border-bottom: 0;
+  }
+}
+
+.input__fileUpload {
+  @extend %fileUpload;
+  padding: 60px 0;
+  @include align-items(center);
+  @include justify-content(flex-end);
+  gap: 10px;
+  position: relative;
+
+  button {
+    padding: 10px 20px;
+    box-shadow: none;
+    margin: 10px 0 20px 0;
+  }
+
+  &--files {
+    @extend %fileUpload;
+    padding: 10px 20px;
+
+    div {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 5px 20px;
+      font-size: 16px;
+    }
+  }
+}
+
+#fileDragDrop {
+  position: absolute;
+  top: 5px;
+  height: 200px;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+}
+
+
+.files-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $dark-3;
+  padding: 5px 15px;
+  margin-top: 10px;
+
+  button {
+    padding: 0;
+    box-shadow: none;
+    margin-right: 0;
+  }
+}
+
+.files-list .delete-file {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.files-list .delete-file img {
+  width: 20px;
+}
+
+// ::ng-deep collab-comp-button.browse-files button {
+//     margin-right: 0;
+//     margin-top: 10px;
+//     margin-bottom: 10px;
+//     padding: 10px 20px;
+// }
+
+// ::ng-deep collab-comp-button.add-btn button {
+//     padding: 5px 20px;
+// }
+
+.static-table {
+  margin-top: 20px;
+
+  h4 {
+    margin-bottom: 14px;
+    ;
+  }
+}
+
+.error-block {
+  background-color: #FFD5CC;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 12px;
+  border: 2px solid #8E0001;
+  color: #8E0001;
+}
+
+.btn-container {
+  display: flex;
+  column-gap: 20px;
+}

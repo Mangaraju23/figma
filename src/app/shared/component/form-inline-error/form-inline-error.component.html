@@ -1,0 +1,5 @@
+<div *ngIf="isSubmitted && errorControlName?.errors" class="text__error inline_error">
+  <ng-container *ngIf="errorControlName?.errors?.['required']">{{messageConfig?.required}}</ng-container>
+  <ng-container *ngIf="errorControlName?.errors?.['pattern']">{{messageConfig?.pattern}}</ng-container>
+  <ng-container *ngIf="errorControlName?.errors?.['whitespace']">{{messageConfig?.whitespace}}</ng-container>
+</div>

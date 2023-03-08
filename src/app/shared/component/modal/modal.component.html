@@ -1,0 +1,30 @@
+<div class="modal-background"></div>
+<div class="modal-wrapper" aria-modal="true" id="modal-wrapper" attr.aria-labelledby="{{modalConfig.modalType}}_label">
+    <div class="modal" trapFocus> 
+        <div class="modal-body">
+            <div class="modal-title-container" *ngIf="modalConfig && modalConfig.titleSection">
+                <div class="modal-first">
+                    <!-- <collab-comp-img-generator  *ngIf="modalConfig?.titleSection?.titileIcon" [imgUrl]="modalConfig?.titleSection?.titileIcon"></collab-comp-img-generator> -->
+                    <h5 class="modal-title" id="{{modalConfig.modalType}}_label">{{ modalConfig.titleSection.title }}</h5>
+                </div>
+                <button class="button--primary modal-close-icon" aria-label="Close Modal">
+                    <!-- <collab-comp-img-generator (click)="dismiss()" *ngIf="modalConfig?.titleSection?.titleClose" [fontClassName]="'icon-Close'"></collab-comp-img-generator> -->
+                </button>
+            </div>
+            <div class="modal-container" *ngIf="modalConfig">
+                <ng-content></ng-content>            
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="button--secondary" (click)="dismiss()"
+                    *ngIf="modalConfig?.dismissButtonLabel">
+                    {{ modalConfig.dismissButtonLabel }}
+                </button>
+                <button type="button" class="button--primary" (click)="close()"
+                    *ngIf="modalConfig?.closeButtonLabel"
+                    [disabled]="modalConfig.disableCloseButton !== undefined && modalConfig.disableCloseButton()">
+                    {{ modalConfig.closeButtonLabel }}
+                </button>                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,432 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?kingff');
+    src: url('fonts/icomoon.eot?kingff#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kingff') format('truetype'),
+    url('fonts/icomoon.woff?kingff') format('woff'),
+    url('fonts/icomoon.svg?kingff#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: inherit;
+    display: block;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-size: 1.5rem;
+}
+
+.icon-disable {
+    filter: opacity(25%);
+    cursor: not-allowed;
+}
+
+.icon-enable {
+    cursor: pointer;
+}
+
+.icon-Last_Inactive:before {
+    content: "\e94c";
+}
+
+.icon-First_Inactive:before {
+    content: "\e94d";
+}
+
+.icon-Next_Inactive:before {
+    content: "\e94e";
+}
+
+.icon-Previous_Inactive:before {
+    content: "\e94f";
+}
+
+
+.icon-Last_Active:before {
+    content: "\e94c";
+    color: #0040DD;
+}
+
+.icon-First_Active:before {
+    content: "\e94d";
+    color: #0040DD;
+}
+
+.icon-Next_Active:before {
+    content: "\e94e";
+    color: #0040DD;
+}
+
+.icon-Previous_Active:before {
+    content: "\e94f";
+    color: #0040DD;
+}
+
+
+.icon-OneView:before {
+    content: "\e958";
+}
+
+.icon-MLOps:before {
+    content: "\e959";
+}
+
+.icon-IAF:before {
+    content: "\e956";
+}
+
+.icon-ITA:before {
+    content: "\e957";
+}
+
+.icon-Plus_Filled:before {
+    content: "\e950";
+}
+
+.icon-Business:before {
+    content: "\e951";
+}
+
+.icon-Critical:before {
+    content: "\e952";
+}
+
+.icon-Minor:before {
+    content: "\e953";
+}
+
+.icon-Moderate:before {
+    content: "\e954";
+}
+
+.icon-Serious:before {
+    content: "\e955";
+}
+
+.icon-Error1:before {
+    content: "\e962";
+}
+
+.icon-Running:before {
+    content: "\e900";
+}
+
+.icon-Success:before {
+    content: "\e901";
+}
+
+.icon-Warning:before {
+    content: "\e902";
+}
+
+.icon-Help:before {
+    content: "\e903";
+}
+
+.icon-Error:before {
+    content: "\e904";
+}
+
+.icon-Add:before {
+    content: "\e905";
+}
+
+.icon-Arrow-Down:before {
+    content: "\e906";
+}
+
+.icon-Arrow-Left:before {
+    content: "\e907";
+}
+
+.icon-Arrow-Right:before {
+    content: "\e908";
+}
+
+.icon-Arrow-Up:before {
+    content: "\e909";
+}
+
+.icon-Chev-Down:before {
+    content: "\e90a";
+}
+
+.icon-Chev-Left:before {
+    content: "\e90b";
+}
+
+.icon-Chev-Right:before {
+    content: "\e90c";
+}
+
+.icon-Chevs-Down:before {
+    content: "\e90d";
+}
+
+.icon-Chevs-Left:before {
+    content: "\e90e";
+}
+
+.icon-Chevs-Right:before {
+    content: "\e90f";
+}
+
+.icon-Chevs-Up:before {
+    content: "\e910";
+}
+
+.icon-Chev-Up:before {
+    content: "\e911";
+}
+
+.icon-Close:before {
+    content: "\e912";
+}
+
+.icon-Copy:before {
+    content: "\e913";
+}
+
+.icon-Cursor:before {
+    content: "\e914";
+}
+
+.icon-Delete:before {
+    content: "\e915";
+}
+
+.icon-Disiked:before {
+    content: "\e916";
+}
+
+.icon-Dislike:before {
+    content: "\e917";
+}
+
+.icon-Download:before {
+    content: "\e918";
+}
+
+.icon-Edit:before {
+    content: "\e919";
+}
+
+.icon-Email:before {
+    content: "\e91a";
+}
+
+.icon-File:before {
+    content: "\e91b";
+}
+
+.icon-Like:before {
+    content: "\e91c";
+}
+
+.icon-Liked:before {
+    content: "\e91d";
+}
+
+.icon-Loading:before {
+    content: "\e91e";
+}
+
+.icon-Menu:before {
+    content: "\e91f";
+}
+
+.icon-Minus:before {
+    content: "\e920";
+}
+
+.icon-Notification:before {
+    content: "\e921";
+}
+
+.icon-Password-Off:before {
+    content: "\e922";
+}
+
+.icon-Play:before {
+    content: "\e923";
+}
+
+.icon-Plus:before {
+    content: "\e924";
+}
+
+.icon-Remove:before {
+    content: "\e925";
+}
+
+.icon-Reorder:before {
+    content: "\e926";
+}
+
+.icon-Reset:before {
+    content: "\e927";
+}
+
+.icon-Search:before {
+    content: "\e928";
+}
+
+.icon-Stop:before {
+    content: "\e929";
+}
+
+.icon-Upload:before {
+    content: "\e92a";
+}
+
+.icon-User:before {
+    content: "\e92b";
+}
+
+.icon-View-Password:before {
+    content: "\e92c";
+}
+
+.icon-Icon-1:before {
+    content: "\e92d";
+}
+
+.icon-Icon-2:before {
+    content: "\e92e";
+}
+
+.icon-Icon-3:before {
+    content: "\e92f";
+}
+
+.icon-Icon-4:before {
+    content: "\e930";
+}
+
+.icon-Icon-5:before {
+    content: "\e931";
+}
+
+.icon-Classification:before {
+    content: "\e932";
+}
+
+.icon-Components:before {
+    content: "\e933";
+}
+
+.icon-Continue:before {
+    content: "\e934";
+}
+
+.icon-Modules:before {
+    content: "\e935";
+}
+
+.icon-Review:before {
+    content: "\e936";
+}
+
+.icon-Test-Cases:before {
+    content: "\e937";
+}
+
+.icon-Total:before {
+    content: "\e938";
+}
+
+.icon-Reports:before {
+    content: "\e939";
+}
+
+.icon-Requirements:before {
+    content: "\e93a";
+}
+
+.icon-Test-Data-Management:before {
+    content: "\e93b";
+}
+
+.icon-Test-Design:before {
+    content: "\e93c";
+}
+
+.icon-Test-Execution:before {
+    content: "\e93d";
+}
+
+.icon-Test-Optimization:before {
+    content: "\e93e";
+}
+
+.icon-Compliance:before {
+    content: "\e93f";
+}
+
+.icon-Dashboard:before {
+    content: "\e940";
+}
+
+.icon-Design:before {
+    content: "\e941";
+}
+
+.icon-Developer:before {
+    content: "\e942";
+}
+
+.icon-Document-Scan:before {
+    content: "\e943";
+}
+
+.icon-History:before {
+    content: "\e944";
+}
+
+.icon-Plugin:before {
+    content: "\e945";
+}
+
+.icon-Web-Scan:before {
+    content: "\e946";
+}
+
+.icon-Accessible:before {
+    content: "\e947";
+}
+
+.icon-Remediation:before {
+    content: "\e948";
+}
+
+.icon-Request-History:before {
+    content: "\e949";
+}
+
+.icon-Rescan:before {
+    content: "\e94a";
+}
+
+.icon-View-Document:before {
+    content: "\e94b";
+}
+
+.icon-ADE:before {
+    content: "\e931";
+}

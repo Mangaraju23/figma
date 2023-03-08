@@ -1,0 +1,50 @@
+@import "../../../../styles/settings/_color.scss";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: blue;
+  position: relative;
+  padding: 10px 20px;
+  margin: 1px;
+  height: 50px;
+
+  &__logo {
+    width: 150px;
+    margin-top: 5px;
+    height: auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+.icons {
+  display: flex;
+  img {
+    width: 20px;
+    color: #ffff;
+    margin-left: 30px;
+    filter: invert(100);
+  }
+  .notification {
+    position: relative;
+    
+    .badge {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+      background-color: red;
+      color: #ffff;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 40px;
+      top: -6px;
+      font-size: 0.75rem;
+    }
+  }
+}

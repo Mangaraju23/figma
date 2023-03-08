@@ -1,0 +1,165 @@
+@import 'src/styles/settings/color';
+@import 'src/styles/mixins/spacing';
+@import 'src/styles/mixins/common';
+@import 'src/styles/mixins/flexbox';
+@import 'src/styles/settings/fonts';
+
+
+%disabled {
+  background-color: $dark-4;
+  cursor: not-allowed;
+
+  > * {
+    color: $white;
+  }
+}
+
+button {
+  @include border-radius(0.5rem);
+  border: none;
+  font-size: 1rem;
+  width: fit-content;
+  cursor: pointer;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(flex-start);
+  @include flex-direction(row);
+}
+
+.button {
+  @extend button;
+
+  &__primary,
+  &__secondary,
+  &__error,
+  &__link {
+    padding: 0.75rem 1.5rem;
+
+    &--small {
+      padding: 0.5rem 0.75rem;
+    }
+    &:disabled {
+      @extend %disabled;
+    }
+  }
+
+  &__add {
+    @include flexbox;
+    @include border-radius(4px);
+    @include flex-direction(column);
+    @include box-shadow(0, 1px, 3px, rgba($black, 0.16));
+    @include justify-content(flex-start);
+    @include align-content(center);
+    padding: 1.75rem 0 1.25rem 0;
+    background-color: $white;
+    width: 210px;
+    height: 146px;
+    border: 1px solid $dark-4;
+    &:before {
+      font-family: 'icomoon';
+      content: "\e950";
+      font-size: 4rem;
+      color: $accent-primary;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__icon {
+    background-color: $white;
+    
+    &:disabled {
+      @extend %disabled;
+    }
+  }
+
+  &__primary {
+    color: $button-primary-text;
+    background-color: $button-primary-background;
+
+    &--iconLeft,
+    &--iconRight {
+      @extend .button__primary;
+    }
+
+    &--iconRight {
+      @include flex-direction(row-reverse);
+    }
+
+    &:hover:enabled, &:focus {
+      background-color: $button-primary-hover-background;
+    }
+
+    &:active:enabled {
+      background-color: $button-primary-active-background;
+    }
+  }
+
+  &__secondary {
+    color: $button-secondary-text;
+    background-color: $button-secondary-background;
+    border: 1px solid $button-secondary-border;
+
+    &--iconLeft,
+    &--iconRight {
+      @extend .button__secondary;
+    }
+
+    &--iconRight {
+      @include flex-direction(row-reverse);
+    }
+
+    &:hover:enabled, &:focus {
+      color: $button-secondary-hover-textColor;
+    }
+
+    &:active:enabled{
+      color: $button-secondary-active-textColor;
+      border-color: $button-secondary-active-border;
+    }
+  }
+
+  &__error {
+    color: $button-error-text;
+    background-color: $button-error-background;
+
+    &--iconLeft,
+    &--iconRight {
+      @extend .button__error;
+    }
+
+    &--iconRight {
+      @include flex-direction(row-reverse);
+    }
+
+    &:hover:enabled, &:focus,
+    &:active:enabled {
+      background-color: $button-error-hover-background;
+    }
+  }
+}
+
+.text__link {
+  color: $text-link-text;
+  // background-color: $button-primary-background;
+  width: fit-content;
+  text-decoration: none;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(flex-start);
+  @include flex-direction(row);
+
+  &--iconLeft,
+  &--iconRight {
+    @extend .text__link;
+  }
+
+  &--iconRight {
+    @include flex-direction(row-reverse);
+  }
+
+  &:hover:enabled,
+  &:active:enabled,
+  &:visited:enabled  {
+    @include flex-direction(row-reverse);
+  }
+}

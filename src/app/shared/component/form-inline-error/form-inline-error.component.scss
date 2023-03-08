@@ -1,0 +1,14 @@
+@import '/src/styles/settings/color';
+
+.material-icons{
+  font-size: 15px;
+  color: $error;
+  transform: translate(0px, 1px);
+  margin-right: 2px;
+}
+
+.inline_error{
+    font-size: small;
+    font-weight: bold;
+    color: $error;
+}

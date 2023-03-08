@@ -1,0 +1,61 @@
+<div class="input__fileUpload" fileDragDrop (onFileDropped)="uploadFile($event)">
+  <!-- <img src="./assets/{{imagePath}}" alt=""> -->
+  <input type="file" id="fileDragDrop" #fileInput multiple accept="{{acceptedFileType}}"
+    (change)="uploadFile($event.target?.['files'])" value="">
+  <ng-container>
+    <div>Drag and Drop {{typeOfFile}} or Upload Files</div>
+    <label for="fileDragDrop" aria-hidden="true" hidden>Browse for {{typeOfFile}} file(s)</label>
+    <div class="btn-container">
+      <collab-comp-button type="button" class="browse-files" [buttonConfig]="browseButtonConfig"
+        (onBtnClick)="fileInput.click()"></collab-comp-button>
+      <ng-container *ngIf="showExtraButton">
+        <collab-comp-button
+          *CheckPermissions="showExtraButtonPermission.page; name:showExtraButtonPermission.permissionName"
+          type="button" class="browse-files" [buttonConfig]="linkExternalButtonConfig"
+          (onBtnClick)="OnLinkExternalClick()"></collab-comp-button>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>
+
+<span *ngIf="!noNotes">{{acceptedFileType}} {{footerNotes}}</span>
+
+<div class="text--error" *ngIf="tableData && uniquErrorExtn.length > 0">
+  <ng-container *ngFor="let extn of uniquErrorExtn;let i=index">{{extn}}
+    <ng-container *ngIf="i+1 < uniquErrorExtn.length && uniquErrorExtn.length !== 2">,
+    </ng-container>
+    <ng-container *ngIf="i+1 === uniquErrorExtn.length-1"> and
+    </ng-container>
+  </ng-container>
+  Error: filetype(s) are not supported.
+</div>
+<div class="error-block" *ngIf="tableData.length === 0 && isSubmitted">
+  Error: Documents field cannot be empty.
+</div>
+<div class="error-block" *ngIf="isMaxSizeExceeded">
+  Error: File size should not exceed 10MB
+</div>
+<div class="error-block" *ngIf="uploadAllTestCasesFilesError">
+  Error: Please assign all document types before proceeding further.
+</div>
+<div class="error-block" *ngIf="duplicateFilesUploadedError">
+  Error: Document Types should not be duplicate.
+</div>
+<div class="error-block" *ngIf="defectLogsCount">
+  Error: Defect Logs document type should be once.
+</div>
+<div class="error-block" *ngIf="testExecutionLogsCount">
+  Error: Test Execution Logs document type should be once or more.
+</div>
+<div class="error-block" *ngIf="raOutputFileCount">
+  Error: Requirement Analyzer Output type should be optional or once.
+</div>
+
+<!-- <collab-comp-table-grid id="ag-grid" *ngIf="rowData" [paginationPageSize]="10" [rowData]="rowData" [columnHeader]="columnDefs" (gridReady)="onGridReady($event)"
+    [columnNames]="columnNames" [tableButtonsConfig]="tableButtonsConfig" [defaultColDef]="defaultColDef" [frameworkComponents]="frameworkComponents">
+</collab-comp-table-grid> -->
+<div class="static-table" *ngIf="tableData.length > 0">
+  <h4>Documents</h4>
+  <app-static-table [tableData]="tableData" [dataTypeList]="dataTypeList" (emitDeleteRow)="deleteRow($event)">
+  </app-static-table>
+</div>
